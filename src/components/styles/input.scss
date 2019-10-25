@@ -1,0 +1,27 @@
+.location-container {
+  width: 60%;
+  display: flex;
+  align-items: last baseline;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.location {
+  letter-spacing: 1px;
+  font-size: 0.5rem;
+  width: 70%;
+}
+
+.input-box {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: orange; // will change depending on weather
+  border-width: 0.01rem;
+  width: 80%;
+  padding-top: 8px;
+}
+
+.set {
+  font-size: 0.4rem;
+}

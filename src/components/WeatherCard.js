@@ -1,5 +1,4 @@
 import React from 'react';
-import mostlyCloudy from './../icons/mostlyCloudy.png'
 
 const WeatherCard = (props) => {
 
@@ -22,7 +21,7 @@ const WeatherCard = (props) => {
   const date = Date.now
   return (
     <div className='weather-card box'>
-      <img className='icon' src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`} alt='Choose a city!'/>
+      {props.data.icon ? <img className='icon' src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`} alt='Choose a city!'/> : null}  
       <div className='weather-info'>
         <span className='temp title'>{Math.round(props.data.temp)}&deg;</span>
         <span className='weather-descripton'>{props.data.description}</span>

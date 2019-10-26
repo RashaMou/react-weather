@@ -4,12 +4,15 @@
   align-items: last baseline;
   padding-top: 30px;
   justify-content: center;
+
+  @media #{$phone} {
+    width: 100%;
+  }
 }
 
 .location {
   letter-spacing: 1px;
   font-size: 0.9rem;
-  // width: 90%;
 }
 
 .form {

@@ -1,0 +1,45 @@
+.location-container {
+  width: 60%;
+  display: flex;
+  align-items: last baseline;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.location {
+  letter-spacing: 1px;
+  font-size: 0.5rem;
+  width: 90%;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: self-end;
+}
+
+.input-box {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: orange; // will change depending on weather
+  border-width: 0.01rem;
+  width: 90%;
+  padding-top: 8px;
+}
+
+.form-inner {
+  display: flex;
+}
+
+.set {
+  font-size: 0.5rem;
+  align-self: end;
+  padding-top: 0 0 0 0;
+  border: none;
+  padding-top: 10px;
+  cursor: pointer;
+  &:hover {
+    color: orange;
+  }
+}

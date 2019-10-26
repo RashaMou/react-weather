@@ -1,0 +1,42 @@
+.weather-card.box {
+  background-color: light-grey;
+  width: 60%;
+  margin: 20px 0 40px 0;
+  display: flex;
+  padding: 0;
+
+  
+}
+
+.weather-card > img:nth-child(1) {
+  width: 50%;
+  height: auto;
+ }
+ 
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-left: 20px;
+
+  .temp {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .weather-descripton {
+    font-size: 0.7rem;
+    padding-bottom: 10px;
+  }
+
+  .date {
+    font-size: 0.5rem;
+  }
+
+  .place {
+    font-size: 0.5rem;
+    padding-bottom: 5px;
+  }
+
+}

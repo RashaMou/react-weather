@@ -4,12 +4,15 @@
   align-items: last baseline;
   padding-top: 30px;
   justify-content: center;
+
+  @media #{$phone} {
+    width: 100%;
+  }
 }
 
 .location {
   letter-spacing: 1px;
-  font-size: 0.5rem;
-  width: 90%;
+  font-size: 0.9rem;
 }
 
 .form {
@@ -24,8 +27,8 @@
   border-left: none;
   border-color: orange; // will change depending on weather
   border-width: 0.01rem;
-  width: 90%;
-  padding-top: 8px;
+  width: 100%;
+  padding-top: 10px;
 }
 
 .form-inner {
@@ -33,7 +36,7 @@
 }
 
 .set {
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   align-self: end;
   padding-top: 0 0 0 0;
   border: none;

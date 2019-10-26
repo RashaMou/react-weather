@@ -1,11 +1,18 @@
+.box-container {
+  width: 100%;
+}
+
 .weather-card.box {
   background-color: light-grey;
   width: 60%;
-  margin: 20px 0 40px 0;
+  margin: 0 auto;
   display: flex;
-  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
 
-  
+  @media #{$phone}{
+    width: 75%;
+  }
 }
 
 .weather-card > img:nth-child(1) {
@@ -39,4 +46,8 @@
     padding-bottom: 5px;
   }
 
+}
+
+.empty {
+  margin-bottom: 30px;
 }

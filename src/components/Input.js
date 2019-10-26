@@ -10,9 +10,10 @@ const Input = (props) => {
               name='city'
               className='input-box'
               onChange={props.onChange}
+              placeholder='Enter city'
             />  
           </label>
-          <button type='submit' className='set button'>SET</button>
+          {/* <button type='submit' className='set button'>SET</button> */}
       </form>
     </div>
   )

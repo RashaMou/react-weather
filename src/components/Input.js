@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Input = () => {
+const Input = (props) => {
   return (
     <div className='location-container'>
-      <label htmlFor='city' className='location'>LOCATION
-        <form>
-          <input 
-            type='text'
-            name='city'
-            className='input-box'
-          />
-        </form>
-      </label>
-      <span className='set'>SET</span>
+      <form onSubmit={props.onSubmit} className='form'>
+        <label htmlFor='city' className='location'>LOCATION
+            <input 
+              type='text'
+              name='city'
+              className='input-box'
+              onChange={props.onChange}
+            />  
+          </label>
+          <button type='submit' className='set button'>SET</button>
+      </form>
     </div>
   )
 }

@@ -9,7 +9,13 @@
 .location {
   letter-spacing: 1px;
   font-size: 0.5rem;
-  width: 70%;
+  width: 90%;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: self-end;
 }
 
 .input-box {
@@ -18,10 +24,22 @@
   border-left: none;
   border-color: orange; // will change depending on weather
   border-width: 0.01rem;
-  width: 80%;
+  width: 90%;
   padding-top: 8px;
 }
 
+.form-inner {
+  display: flex;
+}
+
 .set {
-  font-size: 0.4rem;
+  font-size: 0.5rem;
+  align-self: end;
+  padding-top: 0 0 0 0;
+  border: none;
+  padding-top: 10px;
+  cursor: pointer;
+  &:hover {
+    color: orange;
+  }
 }

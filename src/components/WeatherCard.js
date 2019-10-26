@@ -22,11 +22,11 @@ const WeatherCard = (props) => {
   const date = Date.now
   return (
     <div className='weather-card box'>
-      <img className='icon' src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt='weather icon'/>
+      <img className='icon' src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`} alt='Choose a city!'/>
       <div className='weather-info'>
-        <span className='temp title'>{Math.round(props.temp)}&deg;</span>
-        <span className='weather-descripton'>{props.description}</span>
-        <span className='place'>{props.place}</span>
+        <span className='temp title'>{Math.round(props.data.temp)}&deg;</span>
+        <span className='weather-descripton'>{props.data.description}</span>
+        <span className='place'>{props.data.place}</span>
         <span className='date'>{formatDate(new Date())}</span>
       </div>
     </div>

@@ -9,10 +9,12 @@ function App() {
   const[city, setCity] = useState('') 
   
   //weather state from API 
-  const[description, setDescription] = useState('')
-  const[temp, setTemp] = useState('')
-  const[icon, setIcon] = useState('')
-  const[place, setPlace] = useState('')
+  const[data, setData] = useState({
+    description: '',
+    temp: '',
+    icon: '',
+    place: ''
+  })
   const apiKey = 'acb48d94d25a3f640a71be445fa0b204'
   
   const handleChange = (event) => {
@@ -24,11 +26,13 @@ function App() {
     axios
       .get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`)
       .then (res => {
-        setDescription(res.data.weather[0].description)
         const farenheit = (res.data.main.temp - 273.15) * 9/5 + 32
-        setTemp(farenheit)
-        setIcon(res.data.weather[0].icon) 
-        setPlace(`${res.data.name}, ${res.data.sys.country}`)   
+        setData({
+          description: res.data.weather[0].description,
+          temp: farenheit,
+          icon: res.data.weather[0].icon,
+          place: `${res.data.name}, ${res.data.sys.country}`
+        }) 
       })
       .catch (err => {
         console.log(err)
@@ -42,10 +46,11 @@ function App() {
       </header>
       <div className='inner-flex-container'>
         <Input  onSubmit={handleSubmit} onChange={handleChange}/>
-        <WeatherCard temp={temp} description={description} place={place} icon={icon}/>
+        <WeatherCard data={data}/>
       </div>
     </div>
   );
 }
 
 export default App;
+

@@ -12,7 +12,7 @@ const Input = (props) => {
               onChange={props.onChange}
             />  
           </label>
-          <button type='submit' className='set button'>SET</button>
+          {/* <button type='submit' className='set button'>SET</button> */}
       </form>
     </div>
   )

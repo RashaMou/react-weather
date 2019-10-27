@@ -21,6 +21,14 @@ function App() {
     setCity(event.target.value)
   }
 
+  const toCelcius = (f) => {   
+    setData({...data, temp: (f - 32) * 5/9})
+  }
+
+  const toFarenheit = (c) => {
+    setData({...data, temp: (c * 9/5) + 32})
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
     axios
@@ -45,8 +53,8 @@ function App() {
         <h1 className='title'>Hey I made a weather app!</h1>
       </header>
       <div className='inner-flex-container'>
-        <Input  onSubmit={handleSubmit} onChange={handleChange}/>
-        <WeatherCard data={data}/>
+        <Input onSubmit={handleSubmit} onChange={handleChange} toCelcius={() => toCelcius(data.temp)} toFarenheit={() => toFarenheit(data.temp)}/>
+        <WeatherCard data={data} />
       </div>
     </div>
   );

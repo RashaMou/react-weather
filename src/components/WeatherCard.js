@@ -17,7 +17,7 @@ const WeatherCard = (props) => {
     return (`${monthNames[monthIndex]} ${day} ${year}`);
   }
   
-  console.log(formatDate(new Date()));
+  // console.log(formatDate(new Date()));
   const date = Date.now
   return (
     <div className='box-container'>

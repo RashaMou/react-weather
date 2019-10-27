@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Input = (props) => {
   return (
@@ -13,8 +13,8 @@ const Input = (props) => {
               placeholder='Enter city'
             />  
           </label>
-          {/* <button type='submit' className='set button'>SET</button> */}
       </form>
+      <span className='unit' onClick={props.toFarenheit}>F&deg;</span><span className='bar'>|</span><span className='unit' onClick={props.toCelcius}>C&deg;</span>
     </div>
   )
 }

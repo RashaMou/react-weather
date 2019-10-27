@@ -13,7 +13,8 @@ function App() {
     description: '',
     temp: '',
     icon: '',
-    place: ''
+    place: '',
+    isFarenheit: false,
   })
   const apiKey = 'acb48d94d25a3f640a71be445fa0b204'
   
@@ -21,12 +22,15 @@ function App() {
     setCity(event.target.value)
   }
 
-  const toCelcius = (f) => {   
-    setData({...data, temp: (f - 32) * 5/9})
+  const toCelcius = (f) => {  
+    if(data.isFarenheit === true) {
+      setData({...data, temp: (f - 32) * 5/9, isFarenheit: false})
+    } 
   }
 
   const toFarenheit = (c) => {
-    setData({...data, temp: (c * 9/5) + 32})
+    if(data.isFarenheit === false)
+    setData({...data, temp: (c * 9/5) + 32, isFarenheit: true})
   }
 
   const handleSubmit = (event) => {
@@ -39,7 +43,8 @@ function App() {
           description: res.data.weather[0].description,
           temp: farenheit,
           icon: res.data.weather[0].icon,
-          place: `${res.data.name}, ${res.data.sys.country}`
+          place: `${res.data.name}, ${res.data.sys.country}`,
+          isFarenheit: true
         }) 
       })
       .catch (err => {

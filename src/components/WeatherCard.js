@@ -17,7 +17,7 @@ const WeatherCard = (props) => {
     return (`${monthNames[monthIndex]} ${day} ${year}`);
   }
   
-  console.log(formatDate(new Date()));
+  // console.log(formatDate(new Date()));
   const date = Date.now
   return (
     <div className='box-container'>
@@ -26,7 +26,7 @@ const WeatherCard = (props) => {
       <img className='icon' src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`} alt={props.data.description}/>
       <div className='weather-info'>
         <span className='temp title'>{Math.round(props.data.temp)}&deg;</span>
-        <span className='weather-descripton'>{props.data.description}</span>
+        {props.data.description == "scattered clouds" || props.data.description == "overcast clouds" ? <span className='weather-descripton scattered-margin'>{props.data.description}</span> : <span className='weather-descripton'>{props.data.description}</span>}
         <span className='place'>{props.data.place}</span>
         <span className='date'>{formatDate(new Date())}</span>
       </div>

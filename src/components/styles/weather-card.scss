@@ -10,7 +10,7 @@
   margin-top: 20px;
   margin-bottom: 30px;
 
-  @media #{$phone}{
+  @media screen and (max-width: 375px){
     width: 75%;
   }
 }
@@ -50,4 +50,8 @@
 
 .empty {
   margin-bottom: 30px;
+}
+
+.scattered-margin {
+  margin-left: 44%;
 }
